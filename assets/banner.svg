@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#0a0f1d" />
+    </linearGradient>
+
+    <!-- Accent Glow Gradients -->
+    <radialGradient id="glowPurple" cx="15%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowCyan" cx="85%" cy="70%" r="70%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="tagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.25" />
+      <circle cx="40" cy="40" r="1.5" fill="#38bdf8" fill-opacity="0.2" />
+    </pattern>
+
+    <!-- Filter for subtle drop shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.28; }
+      50% { opacity: 0.45; }
+    }
+    @keyframes cursorBlink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .hero-name {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 54px;
+      letter-spacing: -0.5px;
+      fill: url(#textGrad);
+    }
+    .hero-subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #94a3b8;
+      letter-spacing: 0.5px;
+    }
+    .code-term {
+      font-family: "SF Mono", "Fira Code", Menlo, Monaco, Consolas, monospace;
+      font-size: 15px;
+      fill: #38bdf8;
+    }
+    .cursor {
+      animation: cursorBlink 1s infinite;
+      fill: #38bdf8;
+    }
+    .tag-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #cbd5e1;
+    }
+    .tag-border {
+      stroke: #334155;
+      stroke-width: 1;
+      rx: 8;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="16" />
+
+  <!-- Grid overlay -->
+  <rect width="100%" height="100%" fill="url(#grid)" rx="16" />
+
+  <!-- Radial Glow Accents -->
+  <rect width="100%" height="100%" fill="url(#glowPurple)" rx="16" />
+  <rect width="100%" height="100%" fill="url(#glowCyan)" rx="16" />
+
+  <!-- Cybernetic Border Outline -->
+  <rect x="2" y="2" width="1196" height="356" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.4" rx="15" />
+
+  <!-- Corner Accents -->
+  <path d="M 16 40 L 16 16 L 40 16" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 1184 40 L 1184 16 L 1160 16" fill="none" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 16 320 L 16 344 L 40 344" fill="none" stroke="#818cf8" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 1184 320 L 1184 344 L 1160 344" fill="none" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Left Status Indicator Badge -->
+  <g transform="translate(60, 52)">
+    <rect width="210" height="32" rx="16" fill="#1e293b" fill-opacity="0.75" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
+    <circle cx="18" cy="16" r="5" fill="#10b981">
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="34" y="21" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#a7f3d0" letter-spacing="0.5">OPEN FOR INNOVATION</text>
+  </g>
+
+  <!-- Main Hero Titles -->
+  <g transform="translate(60, 142)">
+    <text class="hero-name" x="0" y="0">ADITYA SINGH</text>
+    <text class="hero-subtitle" x="2" y="38">MCA Scholar @ The NorthCap University • Full-Stack &amp; Generative AI Engineer</text>
+  </g>
+
+  <!-- Interactive Terminal Line -->
+  <g transform="translate(60, 224)">
+    <rect width="680" height="38" rx="8" fill="#030712" fill-opacity="0.6" stroke="#1e293b" stroke-width="1" />
+    <text class="code-term" x="18" y="24">
+      <tspan fill="#64748b">&gt;</tspan> <tspan fill="#38bdf8">aditya.focus</tspan><tspan fill="#94a3b8"> = [</tspan><tspan fill="#34d399">"GenAI &amp; RAG"</tspan><tspan fill="#94a3b8">, </tspan><tspan fill="#34d399">"Scalable APIs"</tspan><tspan fill="#94a3b8">, </tspan><tspan fill="#34d399">"Deep Learning"</tspan><tspan fill="#94a3b8">]</tspan>
+    </text>
+    <rect class="cursor" x="590" y="11" width="8" height="17" rx="1" />
+  </g>
+
+  <!-- Tech Badges / Pills on Right -->
+  <g transform="translate(60, 290)">
+    <!-- Pill 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="110" height="34" fill="url(#tagGrad)" class="tag-border" />
+      <circle cx="18" cy="17" r="4" fill="#38bdf8" />
+      <text x="30" y="22" class="tag-text">Gemini 2.5</text>
+    </g>
+    <!-- Pill 2 -->
+    <g transform="translate(122, 0)">
+      <rect width="90" height="34" fill="url(#tagGrad)" class="tag-border" />
+      <circle cx="18" cy="17" r="4" fill="#34d399" />
+      <text x="30" y="22" class="tag-text">Python</text>
+    </g>
+    <!-- Pill 3 -->
+    <g transform="translate(224, 0)">
+      <rect width="84" height="34" fill="url(#tagGrad)" class="tag-border" />
+      <circle cx="18" cy="17" r="4" fill="#60a5fa" />
+      <text x="30" y="22" class="tag-text">React</text>
+    </g>
+    <!-- Pill 4 -->
+    <g transform="translate(320, 0)">
+      <rect width="96" height="34" fill="url(#tagGrad)" class="tag-border" />
+      <circle cx="18" cy="17" r="4" fill="#a78bfa" />
+      <text x="30" y="22" class="tag-text">FastAPI</text>
+    </g>
+    <!-- Pill 5 -->
+    <g transform="translate(428, 0)">
+      <rect width="94" height="34" fill="url(#tagGrad)" class="tag-border" />
+      <circle cx="18" cy="17" r="4" fill="#f43f5e" />
+      <text x="30" y="22" class="tag-text">Docker</text>
+    </g>
+    <!-- Pill 6 -->
+    <g transform="translate(534, 0)">
+      <rect width="112" height="34" fill="url(#tagGrad)" class="tag-border" />
+      <circle cx="18" cy="17" r="4" fill="#fbbf24" />
+      <text x="30" y="22" class="tag-text">Leela Chess</text>
+    </g>
+    <!-- Pill 7 -->
+    <g transform="translate(658, 0)">
+      <rect width="108" height="34" fill="url(#tagGrad)" class="tag-border" />
+      <circle cx="18" cy="17" r="4" fill="#2dd4bf" />
+      <text x="30" y="22" class="tag-text">Oracle GenAI</text>
+    </g>
+  </g>
+
+  <!-- Geometric Illustration on Right Side -->
+  <g transform="translate(940, 180)" filter="url(#shadow)">
+    <!-- Outer Rotated Squares -->
+    <rect x="-85" y="-85" width="170" height="170" rx="30" fill="none" stroke="#6366f1" stroke-opacity="0.35" stroke-width="2" transform="rotate(45)" />
+    <rect x="-65" y="-65" width="130" height="130" rx="22" fill="none" stroke="#06b6d4" stroke-opacity="0.45" stroke-width="2" transform="rotate(25)" />
+    <rect x="-45" y="-45" width="90" height="90" rx="16" fill="url(#textGrad)" fill-opacity="0.12" stroke="#a855f7" stroke-width="2" transform="rotate(10)" />
+    
+    <!-- Central Node -->
+    <circle cx="0" cy="0" r="16" fill="#0f172a" stroke="#38bdf8" stroke-width="3" />
+    <circle cx="0" cy="0" r="6" fill="#38bdf8" />
+
+    <!-- Satellite Nodes -->
+    <circle cx="-50" cy="-60" r="4" fill="#818cf8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <line x1="0" y1="0" x2="-50" y2="-60" stroke="#818cf8" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.6" />
+
+    <circle cx="65" cy="-35" r="5" fill="#34d399">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <line x1="0" y1="0" x2="65" y2="-35" stroke="#34d399" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.6" />
+
+    <circle cx="45" cy="55" r="4.5" fill="#f43f5e">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <line x1="0" y1="0" x2="45" y2="55" stroke="#f43f5e" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.6" />
+
+    <circle cx="-60" cy="40" r="4" fill="#fbbf24">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <line x1="0" y1="0" x2="-60" y2="40" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.6" />
+  </g>
+</svg>
+
